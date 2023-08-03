@@ -13,6 +13,14 @@
 
 -spec on_load() -> ok.
 
+-nifs([
+    betree_make/1,
+    betree_make_sub/4,
+    betree_insert_sub/2,
+    betree_exists/2,
+    betree_search/2
+]).
+
 on_load() ->
     SoName = case code:priv_dir(erl_betree) of
         {error, bad_name} ->
