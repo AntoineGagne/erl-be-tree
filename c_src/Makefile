@@ -21,7 +21,8 @@ TIDY=clang-tidy
 
 # C compiler/flags.
 
-CC ?= gcc
+# CC ?= gcc
+CC ?= clang
 CFLAGS = -O3 -std=gnu11 -finline-functions -Wall -Wmissing-prototypes
 
 CFLAGS += -fPIC $(ERTS_INCLUDE_DIR) -I $(ERL_INTERFACE_INCLUDE_DIR) -I $(BETREE_INCLUDE_DIR)
